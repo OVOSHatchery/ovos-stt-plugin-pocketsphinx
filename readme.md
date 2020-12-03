@@ -2,7 +2,7 @@
 
 Mycroft STT plugin for [PocketSphinx](https://cmusphinx.github.io/)
 
-The "plugins" are pip install-able modules that provide new TTS engines for mycroft
+The "plugins" are pip install-able modules that provide new STT engines for mycroft
 
 more info in the [docs](https://mycroft-ai.gitbook.io/docs/mycroft-technologies/mycroft-core/plugins)
 

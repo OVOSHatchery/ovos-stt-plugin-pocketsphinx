@@ -1,4 +1,4 @@
-from mycroft_stt_plugin_pocketpshinx.recognizer import PocketSphinxRecognizer
+from mycroft_stt_plugin_pocketsphinx.recognizer import PocketSphinxRecognizer
 from os.path import isdir, isfile
 from mycroft.stt import BasicSTT
 from mycroft.util.log import LOG
