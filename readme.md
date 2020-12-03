@@ -10,7 +10,7 @@ NOTE: this is very low accuracy and NOT recommended, it is based on a very old [
 
 ## Install
 
-`mycroft-pip install mycroft_stt_plugin_pocketsphinx`
+`mycroft-pip install jarbas-stt-plugin-pocketsphinx`
 
 ## Configuration
 

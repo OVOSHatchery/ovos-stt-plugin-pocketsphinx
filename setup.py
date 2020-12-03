@@ -4,7 +4,7 @@ from setuptools import setup
 PLUGIN_ENTRY_POINT = 'pocketsphinx_stt_plug = ' \
                      'jarbas_stt_plugin_pocketsphinx:PocketSphinxSTTPlugin'
 setup(
-    name='jarbas-stt-plugin_pocketsphinx',
+    name='jarbas-stt-plugin-pocketsphinx',
     version='0.1',
     description='A pocketsphinx stt plugin for mycroft',
     url='https://github.com/JarbasLingua/jarbas-stt-plugin-pocketsphinx',
