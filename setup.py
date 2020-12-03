@@ -11,7 +11,7 @@ setup(
     name='mycroft_stt_plugin_pocketsphinx',
     version='0.1',
     description='A pocketsphinx stt plugin for mycroft',
-    url='https://github.com/OpenJarbas/mycroft-stt-plugin-pocketsphinx',
+    url='https://github.com/JarbasIberianLanguageResources/mycroft-stt-plugin-pocketsphinx',
     author='JarbasAi',
     author_email='jarbasai@mailfence.com',
     license='Apache-2.0',
