@@ -4,9 +4,9 @@ from mycroft.stt import BasicSTT
 from mycroft.util.log import LOG
 
 
-class PocketSphinxSTT(BasicSTT):
+class PocketSphinxSTTPlugin(BasicSTT):
     def __init__(self):
-        super(PocketSphinxSTT, self).__init__()
+        super().__init__()
         pho = self.config.get("pronounciation-dictionary")
         lm = self.config.get("language-model")
         hmm = self.config.get("acoustic-model")
