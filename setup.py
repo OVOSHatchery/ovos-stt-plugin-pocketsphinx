@@ -8,7 +8,7 @@ with open(join(dirname(abspath(__file__)), 'requirements.txt')) as f:
 PLUGIN_ENTRY_POINT = 'pocketsphinx_stt_plug = ' \
                      'mycroft_stt_plugin_pocketsphinx:PocketSphinxSTTPlugin'
 setup(
-    name='mycroft-stt-plugin-pocketsphinx',
+    name='mycroft_stt_plugin_pocketsphinx',
     version='0.1',
     description='A pocketsphinx stt plugin for mycroft',
     url='https://github.com/OpenJarbas/mycroft-stt-plugin-pocketsphinx',
