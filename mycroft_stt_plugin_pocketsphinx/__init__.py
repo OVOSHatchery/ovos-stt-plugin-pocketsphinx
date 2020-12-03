@@ -1,10 +1,10 @@
 from mycroft_stt_plugin_pocketsphinx.recognizer import PocketSphinxRecognizer
 from os.path import isdir, isfile
-from mycroft.stt import BasicSTT
+from mycroft.stt import STT
 from mycroft.util.log import LOG
 
 
-class PocketSphinxSTTPlugin(BasicSTT):
+class PocketSphinxSTTPlugin(STT):
     def __init__(self):
         super().__init__()
         pho = self.config.get("pronounciation-dictionary")
