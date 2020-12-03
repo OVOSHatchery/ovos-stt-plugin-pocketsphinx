@@ -1,22 +1,18 @@
 #!/usr/bin/env python3
-from os.path import join, abspath, dirname
 from setuptools import setup
 
-with open(join(dirname(abspath(__file__)), 'requirements.txt')) as f:
-    requirements = f.readlines()
-
 PLUGIN_ENTRY_POINT = 'pocketsphinx_stt_plug = ' \
-                     'mycroft_stt_plugin_pocketsphinx:PocketSphinxSTTPlugin'
+                     'jarbas_stt_plugin_pocketsphinx:PocketSphinxSTTPlugin'
 setup(
-    name='mycroft_stt_plugin_pocketsphinx',
+    name='jarbas-stt-plugin_pocketsphinx',
     version='0.1',
     description='A pocketsphinx stt plugin for mycroft',
-    url='https://github.com/JarbasIberianLanguageResources/mycroft-stt-plugin-pocketsphinx',
+    url='https://github.com/JarbasLingua/jarbas-stt-plugin-pocketsphinx',
     author='JarbasAi',
     author_email='jarbasai@mailfence.com',
     license='Apache-2.0',
-    packages=['mycroft_stt_plugin_pocketsphinx'],
-    install_requires=requirements,
+    packages=['jarbas_stt_plugin_pocketsphinx'],
+    install_requires=["pocketsphinx>=0.1.3", "speechrecognition>=3.8.1"],
     zip_safe=True,
     classifiers=[
         'Development Status :: 3 - Alpha',
