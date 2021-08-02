@@ -1,7 +1,7 @@
-from jarbas_stt_plugin_pocketsphinx.recognizer import PocketSphinxRecognizer
+from ovos_stt_plugin_pocketsphinx.recognizer import PocketSphinxRecognizer
 from os.path import isdir, isfile
-from mycroft.stt import STT
-from mycroft.util.log import LOG
+from ovos_plugin_manager.templates.stt import STT
+from ovos_utils.log import LOG
 
 
 class PocketSphinxSTTPlugin(STT):

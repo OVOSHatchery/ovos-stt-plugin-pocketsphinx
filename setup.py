@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 from setuptools import setup
 
-PLUGIN_ENTRY_POINT = 'pocketsphinx_stt_plug = ' \
-                     'jarbas_stt_plugin_pocketsphinx:PocketSphinxSTTPlugin'
+PLUGIN_ENTRY_POINT = 'ovos-stt-plugin-pocketsphinx = ' \
+                     'ovos_stt_plugin_pocketsphinx:PocketSphinxSTTPlugin'
 setup(
-    name='jarbas-stt-plugin-pocketsphinx',
-    version='0.1',
+    name='ovos-stt-plugin-pocketsphinx',
+    version='0.1.0',
     description='A pocketsphinx stt plugin for mycroft',
-    url='https://github.com/JarbasLingua/jarbas-stt-plugin-pocketsphinx',
+    url='https://github.com/OpenVoiceOS/ovos-stt-plugin-pocketsphinx',
     author='JarbasAi',
     author_email='jarbasai@mailfence.com',
     license='Apache-2.0',
-    packages=['jarbas_stt_plugin_pocketsphinx'],
-    install_requires=["pocketsphinx>=0.1.3", "speechrecognition>=3.8.1"],
+    packages=['ovos_stt_plugin_pocketsphinx'],
+    install_requires=["pocketsphinx>=0.1.3",
+                      "speechrecognition>=3.8.1",
+                      "ovos-plugin-manager>=0.0.1a3"],
     zip_safe=True,
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -31,6 +33,6 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
-    keywords='mycroft plugin stt',
+    keywords='mycroft ovos plugin stt',
     entry_points={'mycroft.plugin.stt': PLUGIN_ENTRY_POINT}
 )
