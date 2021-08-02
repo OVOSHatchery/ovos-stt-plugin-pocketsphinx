@@ -14,7 +14,7 @@ setup(
     packages=['ovos_stt_plugin_pocketsphinx'],
     install_requires=["pocketsphinx>=0.1.3",
                       "speechrecognition>=3.8.1",
-                      "ovos-plugin-manager>=0.0.1a3"],
+                      "ovos-plugin-manager>=0.0.1a7"],
     zip_safe=True,
     classifiers=[
         'Development Status :: 3 - Alpha',
