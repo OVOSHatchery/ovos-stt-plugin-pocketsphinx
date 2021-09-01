@@ -5,8 +5,8 @@ from ovos_utils.log import LOG
 
 
 class PocketSphinxSTTPlugin(STT):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         pho = self.config.get("pronounciation-dictionary")
         lm = self.config.get("language-model")
         hmm = self.config.get("acoustic-model")

@@ -5,7 +5,7 @@ PLUGIN_ENTRY_POINT = 'ovos-stt-plugin-pocketsphinx = ' \
                      'ovos_stt_plugin_pocketsphinx:PocketSphinxSTTPlugin'
 setup(
     name='ovos-stt-plugin-pocketsphinx',
-    version='0.1.0',
+    version='0.1.1',
     description='A pocketsphinx stt plugin for mycroft',
     url='https://github.com/OpenVoiceOS/ovos-stt-plugin-pocketsphinx',
     author='JarbasAi',
