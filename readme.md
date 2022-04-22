@@ -34,3 +34,11 @@ If you do not want to use the default english model (included) you configure thi
   }
  
 ```
+
+## Docker
+
+This plugin can be used together with [ovos-stt-http-server](https://github.com/OpenVoiceOS/ovos-stt-http-server) 
+
+```bash
+docker run -p 8080:8080 ghcr.io/openvoiceos/pocketsphinx-stt-http-server:master
+```
