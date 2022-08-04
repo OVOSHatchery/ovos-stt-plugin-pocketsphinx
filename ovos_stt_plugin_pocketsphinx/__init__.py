@@ -3,6 +3,14 @@ from os.path import isdir, isfile
 from ovos_plugin_manager.templates.stt import STT
 from ovos_utils.log import LOG
 
+# TODO add support for auto model download per lang
+PocketSphinxSTTConfig = {
+    lang: [{"lang": lang,
+            "display_name": f"Pocketsphinx ({lang}",
+            "offline": True}]
+    for lang in ["en-us"]
+}
+
 
 class PocketSphinxSTTPlugin(STT):
     def __init__(self, *args, **kwargs):
