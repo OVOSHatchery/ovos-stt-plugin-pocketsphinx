@@ -4,7 +4,7 @@ from setuptools import setup
 PLUGIN_ENTRY_POINT = 'ovos-stt-plugin-pocketsphinx = ' \
                      'ovos_stt_plugin_pocketsphinx:PocketSphinxSTTPlugin'
 CONFIG_ENTRY_POINT = 'ovos-stt-plugin-pocketsphinx.config = ' \
-                     'ovos_stt_plugin_pocketsphinx.config:PocketSphinxSTTConfig'
+                     'ovos_stt_plugin_pocketsphinx:PocketSphinxSTTConfig'
 
 setup(
     name='ovos-stt-plugin-pocketsphinx',
