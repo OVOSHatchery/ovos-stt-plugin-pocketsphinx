@@ -6,6 +6,7 @@ from ovos_utils.log import LOG
 # TODO add support for auto model download per lang
 PocketSphinxSTTConfig = {
     lang: [{"lang": lang,
+            "priority": 100,  # bottom of list
             "display_name": f"Pocketsphinx ({lang}",
             "offline": True}]
     for lang in ["en-us"]
