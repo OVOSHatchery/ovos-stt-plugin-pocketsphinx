@@ -1,14 +1,18 @@
-from ovos_stt_plugin_pocketsphinx.recognizer import PocketSphinxRecognizer
 from os.path import isdir, isfile
+
 from ovos_plugin_manager.templates.stt import STT
 from ovos_utils.log import LOG
+
+from ovos_stt_plugin_pocketsphinx.recognizer import PocketSphinxRecognizer
 
 # TODO add support for auto model download per lang
 PocketSphinxSTTConfig = {
     lang: [{"lang": lang,
-            "priority": 100,  # bottom of list
-            "display_name": f"Pocketsphinx ({lang}",
-            "offline": True}]
+            "meta": {
+                "priority": 100,  # bottom of list
+                "display_name": f"Pocketsphinx ({lang}",
+                "offline": True}
+            }]
     for lang in ["en-us"]
 }
 
@@ -36,4 +40,3 @@ class PocketSphinxSTTPlugin(STT):
 
     def execute(self, audio, language=None):
         return self.recognizer.recognize(audio)
-
