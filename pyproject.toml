@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-stt-plugin-pocketsphinx"
+description = "OpenVoiceOS STT plugin for pocketsphinx"
+readme = "readme.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dynamic = ["version"]
+dependencies = [
+    "pocketsphinx>=5.0.0",
+    "speechrecognition>=3.8.1",
+    "ovos-plugin-manager>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/OVOSHatchery/ovos-stt-plugin-pocketsphinx"
+
+[project.entry-points."opm.stt"]
+"ovos-stt-plugin-pocketsphinx" = "ovos_stt_plugin_pocketsphinx:PocketSphinxSTTPlugin"
+
+[project.entry-points."opm.stt.config"]
+"ovos-stt-plugin-pocketsphinx" = "ovos_stt_plugin_pocketsphinx:PocketSphinxSTTConfig"
+
+[project.entry-points."mycroft.plugin.stt"]
+"ovos-stt-plugin-pocketsphinx" = "ovos_stt_plugin_pocketsphinx:PocketSphinxSTTPlugin"
+
+[project.entry-points."mycroft.plugin.stt.config"]
+"ovos-stt-plugin-pocketsphinx" = "ovos_stt_plugin_pocketsphinx:PocketSphinxSTTConfig"
+
+[tool.setuptools]
+packages = ["ovos_stt_plugin_pocketsphinx"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_stt_plugin_pocketsphinx.version.__version__"}

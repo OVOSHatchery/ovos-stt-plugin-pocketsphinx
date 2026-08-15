@@ -1,7 +1,7 @@
 import speech_recognition as sr
 import os
 from os.path import join, isdir, dirname, isfile
-from pocketsphinx import Jsgf, FsgModel, Decoder
+from pocketsphinx import Jsgf, FsgModel, Decoder, get_model_path
 
 
 class PocketSphinxRecognizer:
@@ -26,20 +26,19 @@ class PocketSphinxRecognizer:
                     phoneme_dictionary_file))
 
         # create decoder object
-        config = Decoder.default_config()
-        config.set_string("-hmm", acoustic_parameters_directory)
-        config.set_string("-lm", language_model_file)
-        config.set_string("-dict", phoneme_dictionary_file)
-        config.set_string("-logfn", os.devnull)
-        self.decoder = Decoder(config)
+        self.decoder = Decoder(hmm=acoustic_parameters_directory,
+                               lm=language_model_file,
+                               dict=phoneme_dictionary_file,
+                               logfn=os.devnull)
 
     @staticmethod
     def get_default_english_model():
-        language_directory = join(dirname(sr.__file__),
-                                  "pocketsphinx-data", "en-US")
-        hmm = join(language_directory, "acoustic-model")
-        lm = join(language_directory, "language-model.lm.bin")
-        pho = join(language_directory, "pronounciation-dictionary.dict")
+        # the model bundled with pocketsphinx 5 ships as model/en-us/en-us
+        # (acoustic model dir nested beside the dictionary and LMs)
+        language_directory = join(get_model_path(), "en-us")
+        hmm = join(language_directory, "en-us")
+        lm = join(language_directory, "en-us.lm.bin")
+        pho = join(language_directory, "cmudict-en-us.dict")
         return hmm, lm, pho
 
     def recognize(self, audio_data, keyword_entries=None, grammar=None):
